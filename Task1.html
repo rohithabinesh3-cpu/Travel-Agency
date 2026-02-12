@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyWave Travels</title>
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+/* Hero Animation */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-text {
+  animation: fadeZoom 1.5s ease-in-out forwards;
+}
+
+/* Card Hover Lift */
+.card-hover:hover {
+  transform: translateY(-10px);
+  transition: 0.4s ease;
+}
+
+/* Pricing Table Hover */
+.price-hover {
+  transition: all 0.3s ease;
+}
+.price-hover:hover {
+  border-color: #f755516;
+  transform: scale(1.03);
+}
+</style>
+</head>
+
+<body class="bg-sky-60 text-gray-700">
+
+<!-- Header -->
+<header class="bg-sky-580 text-white shadow-lg fixed w-full z-10">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <h1 class="text-2xl font-bold">SkyWave Travels</h1>
+    <nav class="space-x-6">
+      <a href="#" class="hover:text-orange-300 transition">Home</a>
+      <a href="#destinations" class="hover:text-orange-300 transition">Destinations</a>
+      <a href="#packages" class="hover:text-orange-300 transition">Packages</a>
+      <a href="#contact" class="hover:text-orange-300 transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="h-screen bg-cover bg-center flex items-center justify-center text-white"
+style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+
+  <div class="bg-black bg-opacity-50 p-10 rounded-xl text-center hero-text">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4">
+      Explore the World With Us
+    </h2>
+    <p class="text-lg md:text-xl">Your journey begins here. ✈️</p>
+  </div>
+</section>
+
+<!-- Destinations -->
+<section id="destinations" class="py-16 container mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-10 text-sky-700">
+    Featured Destinations
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Paris</h3>
+        <p>Experience romance, art, and iconic landmarks like the Eiffel Tower.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Maldives</h3>
+        <p>Relax in crystal-clear waters and luxurious beach resorts.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" class="w-full h-56 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Switzerland</h3>
+        <p>Enjoy breathtaking mountain landscapes and scenic train rides.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Packages -->
+<section id="packages" class="bg-sky-100 py-16">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10 text-sky-700">
+      Travel Packages
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      
+      <!-- Basic -->
+      <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200 price-hover">
+        <h3 class="text-xl font-bold mb-4">Basic</h3>
+        <p class="text-3xl font-bold mb-4">₹50,000</p>
+        <ul class="mb-6 space-y-2">
+          <li>3 Days / 2 Nights</li>
+          <li>Standard Hotel</li>
+          <li>City Tour</li>
+        </ul>
+        <button class="bg-sky-600 text-white px-6 py-2 rounded-full hover:bg-orange-500 transition">
+          Book Now
+        </button>
+      </div>
+
+      <!-- Premium (Best Value) -->
+      <div class="bg-white rounded-xl shadow-2xl p-8 border-4 border-orange-400 price-hover">
+        <h3 class="text-xl font-bold mb-4 text-orange-500">Premium ⭐</h3>
+        <p class="text-3xl font-bold mb-4">₹75,000</p>
+        <ul class="mb-6 space-y-2">
+          <li>5 Days / 4 Nights</li>
+          <li>Luxury Hotel</li>
+          <li>Guided Tours</li>
+        </ul>
+        <button class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition">
+          Book Now
+        </button>
+      </div>
+
+      <!-- Luxury -->
+      <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200 price-hover">
+        <h3 class="text-xl font-bold mb-4">Luxury</h3>
+        <p class="text-3xl font-bold mb-4">₹90,000</p>
+        <ul class="mb-6 space-y-2">
+          <li>7 Days / 6 Nights</li>
+          <li>5-Star Resort</li>
+          <li>All Activities Included</li>
+        </ul>
+        <button class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition">
+          Book Now
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-sky-600 text-white py-8">
+  <div class="container mx-auto text-center space-y-3">
+    <p>📍 Chennai, India</p>
+    <p>📞 +91  98765 43210</p>
+    <p>✉ info@skywavetravels.com</p>
+    <div class="space-x-4">
+      <a href="#" class="hover:text-orange-300">Facebook</a>
+      <a href="#" class="hover:text-orange-300">Instagram</a>
+      <a href="#" class="hover:text-orange-300">Twitter</a>
+    </div>
+    <p class="mt-4 text-sm">&copy; 2026 SkyWave Travels. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
